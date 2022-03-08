@@ -6,12 +6,16 @@ class Coche():
          arrancado=False
 
          def arrancar(self):
-                  Coche.arrancado=True
+                  self.arrancado=True
 
+         def estado(self):
+                  if(self.arrancar):
+                           return "El coche esta arrancado"
+                  else:
+                           return "El coche esta parado"
+                  
 mazda=Coche() #ejemplar de clase
 
-a=mazda.ancho
-print (a)
-print (mazda.arrancado) #aqui el coche no esta arrancado
 mazda.arrancar() #arrancamos coche
 print (mazda.arrancado) #devuelve true, el coche esta arrancado.
+print (mazda.estado())
